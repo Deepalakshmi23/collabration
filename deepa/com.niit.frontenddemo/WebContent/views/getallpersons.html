@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="app" ng-controller="PersonController">
+	<table>
+		<thead>
+			<tr>
+				<th>Firstname</th>
+				
+				<th>Lastname</th>
+				
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in persons">
+				<td>{{person.firstname}}</td>
+				
+				<td>{{person.lastname}}</td>
+				
+				<td>{{person.email}}</td>
+				
+				<td>{{person.phonenumber}}</td>
+				
+				<td><a href="#/getpersonbyid/{{person.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+	                <a href="" ng-click="deletePerson(person.id)"><span class="glyphicon glyphicon-trash"></span></a>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript"
+	src="js/app.js"></script>
+<script type="text/javascript"
+	src="js/personcontroller.js"></script>
+<script type="text/javascript" 	src="js/personservice.js"></script>
+</html>
