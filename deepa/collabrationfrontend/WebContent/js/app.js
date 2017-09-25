@@ -21,11 +21,12 @@ app.config(function($routeProvider){
     })
      .when("/savejob", {
         templateUrl : 'views/jobform.html',
-        controller:'JobController'
+        controller:'jobcontroller'
     }) 
-    .when("/savejob", {
-        templateUrl : 'views/jobform.html',
-        controller:'JobController'
+    
+    .when("/getalljobs", {
+    	templateUrl:'views/listofjobs.html',
+    	controller:'jobcontroller'
     })
 	.otherwise({
 		templateUrl:'views/home.html'
